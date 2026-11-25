@@ -22,6 +22,10 @@ public class Thunderbolt : MonoBehaviour
     [SerializeField] private float effectLifetime = 3f;
     [SerializeField] private float burnMarkLifetime = 30f;
 
+    [Header("NPC Panic")]
+    [SerializeField] private float panicRadius = 8f;
+    [SerializeField] private LayerMask npcLayers;
+
     private bool hasExploded;
 
     private void OnCollisionEnter(Collision collision)
@@ -37,6 +41,8 @@ public class Thunderbolt : MonoBehaviour
         hasExploded = true;
 
         ContactPoint contact = collision.GetContact(0);
+        // Alert nearby NPCs
+        AlertNearbyNPCs(contact.point);
 
         // Damage
         IDamageable target =
@@ -80,4 +86,27 @@ public class Thunderbolt : MonoBehaviour
 
         Destroy(gameObject);
     }
+
+    private void AlertNearbyNPCs(Vector3 impactPosition)
+    {
+        Collider[] nearbyObjects = Physics.OverlapSphere(
+            impactPosition,
+            panicRadius,
+            npcLayers,
+            QueryTriggerInteraction.Collide
+        );
+
+        foreach (Collider nearbyObject in nearbyObjects)
+        {
+            IPanicable npc =
+                nearbyObject.GetComponentInParent<IPanicable>();
+
+            if (npc != null)
+            {
+                Debug.Log("NPC is panicking: " + nearbyObject.name);
+                npc.Panic(impactPosition);
+            }
+        }
+    }
+
 }
