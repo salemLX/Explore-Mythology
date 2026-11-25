@@ -1,10 +1,5 @@
 {
   "dependencies": {
-<<<<<<< HEAD
-    "com.unity.ext.nunit": {
-      "version": "2.1.0",
-      "depth": 2,
-=======
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
@@ -23,24 +18,16 @@
     "com.unity.ext.nunit": {
       "version": "2.1.0",
       "depth": 1,
->>>>>>> main
       "source": "builtin",
       "dependencies": {}
     },
     "com.unity.ide.rider": {
-<<<<<<< HEAD
-      "version": "3.1.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-=======
       "version": "3.0.38",
       "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.ext.nunit": "1.0.6"
       },
->>>>>>> main
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
