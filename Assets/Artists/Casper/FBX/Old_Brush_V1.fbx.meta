@@ -3,7 +3,22 @@ guid: 62ea54ececfef1e4bb1bd057e7011a89
 ModelImporter:
   serializedVersion: 24600
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brush Base
+    second: {fileID: 2100000, guid: 47f7bc939eacb6749b16caf8a3690d78, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brush handle
+    second: {fileID: 2100000, guid: 0989d9dfc17daea46865f8a88664fb41, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: brush hair
+    second: {fileID: 2100000, guid: 872eb5a6166b5684ea9fb7cc378762c3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
