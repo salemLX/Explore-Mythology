@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LightingBolt
   minimumImpactSpeed: 5
-  damage: 10
+  damage: 25
   damageRadius: 2
   damageLayers:
     serializedVersion: 2
