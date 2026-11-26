@@ -181,6 +181,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: cc82f93be6fbf8e438df6d6f7f1fd722, type: 2}
+    - target: {fileID: 1478478165442943093, guid: 92fa34bdd6face6489abb83ef4f73dc3, type: 3}
+      propertyPath: panicSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478478165442943093, guid: 92fa34bdd6face6489abb83ef4f73dc3, type: 3}
+      propertyPath: panicDuration
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 2508316294042749397, guid: 92fa34bdd6face6489abb83ef4f73dc3, type: 3}
       propertyPath: m_Name
       value: SmallGuyPlaceHolder (1)
@@ -406,6 +414,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 75a661a37d2a6f74f9a2e182d2810e13, type: 2}
+    - target: {fileID: 1478478165442943093, guid: 92fa34bdd6face6489abb83ef4f73dc3, type: 3}
+      propertyPath: panicSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478478165442943093, guid: 92fa34bdd6face6489abb83ef4f73dc3, type: 3}
+      propertyPath: panicDuration
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 2508316294042749397, guid: 92fa34bdd6face6489abb83ef4f73dc3, type: 3}
       propertyPath: m_Name
       value: SmallGuyPlaceHolder (2)
@@ -521,46 +537,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 100
---- !u!1 &651901000 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2508316294042749397, guid: 92fa34bdd6face6489abb83ef4f73dc3, type: 3}
-  m_PrefabInstance: {fileID: 7720606905881710171}
-  m_PrefabAsset: {fileID: 0}
---- !u!195 &651901002
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 651901000}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.2
-  m_Speed: 1
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 0.45
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &651901005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 651901000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2333b2d1a1740d243bf57f07d470fc41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Health
-  maxHealth: 100
 --- !u!1 &754704083
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,6 +645,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 4dd4fb6ad24b0104c8462d94de65109c, type: 2}
+    - target: {fileID: 1478478165442943093, guid: 92fa34bdd6face6489abb83ef4f73dc3, type: 3}
+      propertyPath: panicSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478478165442943093, guid: 92fa34bdd6face6489abb83ef4f73dc3, type: 3}
+      propertyPath: panicDuration
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 2508316294042749397, guid: 92fa34bdd6face6489abb83ef4f73dc3, type: 3}
       propertyPath: m_Name
       value: SmallGuyPlaceHolder (3)
@@ -895,7 +879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1547050585355049390, guid: 770ad6feca18d474f860cd837faa3045, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.34
+      value: 4.05
       objectReference: {fileID: 0}
     - target: {fileID: 1547050585355049390, guid: 770ad6feca18d474f860cd837faa3045, type: 3}
       propertyPath: m_LocalPosition.z
@@ -931,11 +915,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3582986665351086566, guid: 770ad6feca18d474f860cd837faa3045, type: 3}
       propertyPath: minimumImpactSpeed
-      value: 100
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5676963494836815715, guid: 770ad6feca18d474f860cd837faa3045, type: 3}
       propertyPath: m_Name
       value: ThunderBolt (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5676963494836815715, guid: 770ad6feca18d474f860cd837faa3045, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1070,6 +1058,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 36e8b5f2b1654734fb7276a886e6db1f, type: 2}
+    - target: {fileID: 1478478165442943093, guid: 92fa34bdd6face6489abb83ef4f73dc3, type: 3}
+      propertyPath: panicSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478478165442943093, guid: 92fa34bdd6face6489abb83ef4f73dc3, type: 3}
+      propertyPath: panicDuration
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 2508316294042749397, guid: 92fa34bdd6face6489abb83ef4f73dc3, type: 3}
       propertyPath: m_Name
       value: SmallGuyPlaceHolder (4)
@@ -1157,7 +1153,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581062779}
-  m_Enabled: 0
+  m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.2
   m_Speed: 1
@@ -1338,25 +1334,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1478478165442943093, guid: 92fa34bdd6face6489abb83ef4f73dc3, type: 3}
+      propertyPath: moveSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478478165442943093, guid: 92fa34bdd6face6489abb83ef4f73dc3, type: 3}
+      propertyPath: panicSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478478165442943093, guid: 92fa34bdd6face6489abb83ef4f73dc3, type: 3}
+      propertyPath: maxWaitTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478478165442943093, guid: 92fa34bdd6face6489abb83ef4f73dc3, type: 3}
+      propertyPath: minWaitTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478478165442943093, guid: 92fa34bdd6face6489abb83ef4f73dc3, type: 3}
+      propertyPath: panicDuration
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 2508316294042749397, guid: 92fa34bdd6face6489abb83ef4f73dc3, type: 3}
       propertyPath: m_Name
       value: SmallGuyPlaceHolder
-      objectReference: {fileID: 0}
-    - target: {fileID: 4265566625119833011, guid: 92fa34bdd6face6489abb83ef4f73dc3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.16999996
-      objectReference: {fileID: 0}
-    - target: {fileID: 5159804914819637364, guid: 92fa34bdd6face6489abb83ef4f73dc3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.16999996
-      objectReference: {fileID: 0}
-    - target: {fileID: 6107590373602723984, guid: 92fa34bdd6face6489abb83ef4f73dc3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.137
-      objectReference: {fileID: 0}
-    - target: {fileID: 6347263849573626093, guid: 92fa34bdd6face6489abb83ef4f73dc3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.39899993
       objectReference: {fileID: 0}
     - target: {fileID: 8719092102219602559, guid: 92fa34bdd6face6489abb83ef4f73dc3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1401,13 +1401,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2508316294042749397, guid: 92fa34bdd6face6489abb83ef4f73dc3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 651901002}
-    - targetCorrespondingSourceObject: {fileID: 2508316294042749397, guid: 92fa34bdd6face6489abb83ef4f73dc3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 651901005}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92fa34bdd6face6489abb83ef4f73dc3, type: 3}
 --- !u!1001 &7795514506610140282
 PrefabInstance:
