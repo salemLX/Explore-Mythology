@@ -99,4 +99,11 @@ public class NPCRoaming : NPCBase
 
         Gizmos.DrawWireSphere(center, roamRadius);
     }
+
+    protected override void OnPanicEnded()
+    {
+        isMoving = false;
+        ScheduleNextMove();
+    }
+
 }

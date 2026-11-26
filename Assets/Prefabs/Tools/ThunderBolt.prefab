@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1331997183201005698}
   - component: {fileID: 3582986665351086566}
   - component: {fileID: 908158523957455884}
+  - component: {fileID: 3268364703060257628}
   m_Layer: 0
   m_Name: ThunderBolt
   m_TagString: Untagged
@@ -43,7 +44,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5676963494836815715}
-  m_Mesh: {fileID: -8124439028991611657, guid: 8b5949cbaa48bf840861edcd70ae25bf, type: 3}
+  m_Mesh: {fileID: -8124439028991611657, guid: a6da2145ae6b4b241ba2e27b49a3fbce, type: 3}
 --- !u!23 &893961417276534183
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -69,7 +70,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: 8b5949cbaa48bf840861edcd70ae25bf, type: 3}
+  - {fileID: 2100000, guid: e1c747813b25a7647bbe27464bcff8f2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -129,6 +130,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LightingBolt
   minimumImpactSpeed: 5
   damage: 10
+  damageRadius: 2
+  damageLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  panicRadius: 4
+  npcLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   impactEffectPrefab: {fileID: 4562057321897168956, guid: a41a0a770e0917f4fa7346eb41d8cab7, type: 3}
   burnMarkPrefab: {fileID: 6711644455533597355, guid: d34bfb517c6ac914fa10dfabe354c455, type: 3}
   effectLifetime: 1
@@ -160,3 +169,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!64 &3268364703060257628
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5676963494836815715}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8124439028991611657, guid: a6da2145ae6b4b241ba2e27b49a3fbce, type: 3}
