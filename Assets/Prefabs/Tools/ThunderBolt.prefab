@@ -130,14 +130,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LightingBolt
   minimumImpactSpeed: 5
   damage: 10
+  damageRadius: 2
+  damageLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  panicRadius: 4
+  npcLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   impactEffectPrefab: {fileID: 4562057321897168956, guid: a41a0a770e0917f4fa7346eb41d8cab7, type: 3}
   burnMarkPrefab: {fileID: 6711644455533597355, guid: d34bfb517c6ac914fa10dfabe354c455, type: 3}
   effectLifetime: 1
   burnMarkLifetime: 30
-  panicRadius: 8
-  npcLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!54 &908158523957455884
 Rigidbody:
   m_ObjectHideFlags: 0

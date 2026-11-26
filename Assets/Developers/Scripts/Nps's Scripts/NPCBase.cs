@@ -27,6 +27,9 @@ public abstract class NPCBase : MonoBehaviour, IPanicable
     [SerializeField] private AudioClip[] panicSounds;
     [SerializeField] private Vector2 soundInterval = new(2f, 5f);
 
+    [Header("Panic Visual")]
+    [SerializeField] private GameObject panicIndicator;
+
     protected NavMeshAgent agent;
     protected Vector3 spawnPosition;
 
@@ -42,6 +45,8 @@ public abstract class NPCBase : MonoBehaviour, IPanicable
         0f, 35f, -35f, 70f, -70f, 110f, -110f, 180f
     };
 
+
+
     protected virtual void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -51,6 +56,9 @@ public abstract class NPCBase : MonoBehaviour, IPanicable
 
         if (audioSource == null)
             audioSource = GetComponent<AudioSource>();
+
+        if (panicIndicator != null)
+            panicIndicator.SetActive(false);
     }
 
     protected virtual void Start()
@@ -100,6 +108,9 @@ public abstract class NPCBase : MonoBehaviour, IPanicable
 
         isPanicking = true;
         agent.speed = panicSpeed;
+
+        if (panicIndicator != null)
+            panicIndicator.SetActive(true);
 
         StopMoving();
 
@@ -201,6 +212,9 @@ public abstract class NPCBase : MonoBehaviour, IPanicable
 
         if (animator != null)
             animator.SetBool("IsPanicking", false);
+
+        if (panicIndicator != null)
+            panicIndicator.SetActive(false);
 
         OnPanicEnded();
     }
