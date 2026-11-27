@@ -2,29 +2,62 @@ using UnityEngine;
 
 public class Grab : MonoBehaviour, IGrabbable
 {
-     [SerializeField] private bool isGrabbed = true;
     Rigidbody2D rb;
-
-    public void UnGrab()
+    float originalGravity;
+    Vector3 grabOffset;
+    public Camera arenaCamera;
+    void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
+        originalGravity = rb.gravityScale;
     }
 
     void IGrabbable.Grab()
     {
-        isGrabbed = true;
-        
+
+        rb.linearVelocity = Vector2.zero;   
+        rb.gravityScale = 0f;
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void UnGrab()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb.gravityScale = originalGravity;
     }
 
-    // Update is called once per frame
-    void Update()
+    Vector2 MouseWorld()
     {
-        
+        return Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    }
+
+    Vector3 GetMouseWorldPosition()
+    {
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition.z = arenaCamera.WorldToScreenPoint(transform.position).z;
+        return arenaCamera.ScreenToWorldPoint(mousePosition);
+    }
+
+    void OnMouseDown()
+    {
+        if (arenaCamera == null)
+        {
+            Debug.Log("Arena Camera is NOT ASSIGNED");
+            return;
+        }
+
+        // Work out how far the click was from the item's center
+        grabOffset = transform.position - GetMouseWorldPosition();
+        grabOffset.z = 0;   // never shift the item toward or away from the camera
+    }
+
+    void OnMouseDrag()
+    {
+        if (arenaCamera == null) return;
+
+        // Move to the mouse, but keep the same gap from the click
+        transform.position = GetMouseWorldPosition() + grabOffset;
+    }
+    void OnMouseUp()
+    {
+        UnGrab();
     }
 }
